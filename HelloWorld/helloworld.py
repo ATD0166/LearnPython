@@ -1,0 +1,5 @@
+print('Hello, world!')
+print(1+3)
+print(3*4)
+print()
+print('This is the end.', 'Keep learning Python', 1+2)

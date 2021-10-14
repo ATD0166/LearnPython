@@ -7,7 +7,7 @@ while guess < 0 or guess > 10:
 chance = 2
 while chance > 0:    
     if guess == 5:
-        print("Congrats, you guess the answer in first time!")
+        print("Congrats, you guessed the answer in first time!")
         chance = 0
     else:        
         if guess < 5:

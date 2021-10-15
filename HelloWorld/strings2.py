@@ -21,12 +21,12 @@ print(parrot[-11])
 print(parrot[-8])
 print(parrot[-6])
 print()
-print(parrot[3 -14])
-print(parrot[4 -14])
-print(parrot[9 -14])
-print(parrot[3 -14])
-print(parrot[6 -14])
-print(parrot[8 -14])
+print(parrot[3 - 14])
+print(parrot[4 - 14])
+print(parrot[9 - 14])
+print(parrot[3 - 14])
+print(parrot[6 - 14])
+print(parrot[8 - 14])
 print()
 
 #Slice
@@ -39,10 +39,10 @@ print()
 number = "0,123.456;789:987!654"
 print(number[1:10:4])   #從1號開始，每4個號取1，直到第10號為止(不包括第10號)
 print(number[1::4])     #同上，取號直到序列最尾巴
-seperators = number[1::4]
+separators = number[1::4]
 
 #語法看不懂沒關係，只是示範間隔取號什麼時候可能用到
-value = "".join(char if char not in seperators else " " for char in number).split()
+value = "".join(char if char not in separators else " " for char in number).split()
 print([int(val) for val in value])
 
 print()

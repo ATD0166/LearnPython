@@ -13,9 +13,12 @@ while True:
     answer = random.randint(min, max)
 
     print()
-    print("*** The answer is {} ***".format(answer))   #TODO: Remove after testing
+    #TODO: Remove after testing
+    print("*** The answer is {} ***".format(answer))   
 
-    guess = input("""Guess a number between {0} to {1} (Enter "Q" to quit the game): """.format(min, max))
+    guess = input(
+        """Guess a number between {0} to {1} (Enter "Q" to quit the game): """
+        .format(min, max))
     guessed_times = 1
 
     while True:
@@ -28,12 +31,16 @@ while True:
         if guess.isnumeric():
             guess = int(guess)
         else:
-            guess = input("It must be a NUMBER between {0} to {1} : ".format(min, max))
+            guess = input(
+                "It must be a NUMBER between {0} to {1} : "
+                .format(min, max))
             continue
         
         # 檢查輸入範圍是否符合遊戲規則
         if guess not in range(min, max + 1):
-            guess = input("The number must between {0} to {1} : ".format(min, max))
+            guess = input(
+                "The number must between {0} to {1} : "
+                .format(min, max))
             continue
         
         # 檢查玩家有無猜對
@@ -41,7 +48,8 @@ while True:
             if guessed_times <= 1:
                 print("Congrats, you guessed the answer in first time!")
             else:
-                print("Correct! you guessed the answer in {} times".format(guessed_times))
+                print("Correct! you guessed the answer in {} times"
+                .format(guessed_times))
             break
         
         # 檢查玩家猜得太高還太低
@@ -53,8 +61,11 @@ while True:
         # 記錄玩家猜了幾次
         guessed_times += 1
     
-    if (guess == "q") or (input("""Wanna play again? (Enter "Y" to start a new game): """).casefold() != "y"):
+    if (guess == "q") or (
+        input(
+        """Wanna play again? (Enter "Y" to start a new game): """
+        ).casefold() != "y"):
         print("OK, bye!")
-        break    
+        break
 
 print("=" * 100)

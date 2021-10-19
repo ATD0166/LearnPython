@@ -7,5 +7,5 @@ while chosen_exit.casefold() not in available_exit:
         print("Game over")
         break
 
-
-print("You have gone {} and left the town".format(chosen_exit))
+else:
+    print("You have gone {} and left the town".format(chosen_exit))

@@ -8,14 +8,14 @@ print('The pet shop owner said: "No, no, \'e\'s uh,...he\'s resting".')
 print("The pet shop owner said: \"No, no, 'e's uh,...he's resting\".")
 #or
 print("""The pet shop owner said: "No, no, 'e's un,...he's resting".""")
-statment = """這段話
+statement = """這段話
 利用三引號
 分成了三行"""
-print(statment)
-statment = """這段話\
+print(statement)
+statement = """這段話\
 沒有被\
 分成三行"""
-print(statment)
+print(statement)
 
 #如何在引號內打出\n和\t等\開頭的字串
 #method 1: 雙\\

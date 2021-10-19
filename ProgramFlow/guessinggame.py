@@ -2,38 +2,35 @@ import random
 
 print("=" * 100)
 
-
-continued = True
 max = 100
 min = 1
 answer = 0
-guess = 0
+guess = ""
 guessed_times = 0
 
-while continued:
+while True:
     
     answer = random.randint(min, max)
 
     print()
     print("*** The answer is {} ***".format(answer))   #TODO: Remove after testing
 
-    guess = input("Guess a number between {0} to {1} (Enter 0 to quit the game): ".format(min, max))
+    guess = input("""Guess a number between {0} to {1} (Enter "Q" to quit the game): """.format(min, max))
     guessed_times = 1
 
     while True:
-        # 檢查輸入的是不是數字
-        if not guess.isnumeric():
+        # 檢查玩家是否要結束遊戲
+        if guess.casefold() == "q":
+            guess = "q";
+            break
+        
+        # 檢查輸入的是不是數字，確保guess的type是int
+        if guess.isnumeric():
+            guess = int(guess)
+        else:
             guess = input("It must be a NUMBER between {0} to {1} : ".format(min, max))
             continue
         
-        # 確保guess的type是int
-        guess = int(guess)
-        
-        # 檢查玩家是否要結束遊戲
-        if guess == 0:
-            continued = False
-            break
-
         # 檢查輸入範圍是否符合遊戲規則
         if guess not in range(min, max + 1):
             guess = input("The number must between {0} to {1} : ".format(min, max))
@@ -48,18 +45,16 @@ while continued:
             break
         
         # 檢查玩家猜得太高還太低
-        if int(guess) > answer:
+        if guess > answer:
             guess = input("Guess lower : ")
         else:
             guess = input("Guess higher : ")
 
         # 記錄玩家猜了幾次
         guessed_times += 1
-
     
-    if (continued != False) and (input("Wanna play again? (Enter Y to retry): ").casefold() != "y"):
-        continued = False
-    
-print("OK, bye!")
+    if (guess == "q") or (input("""Wanna play again? (Enter "Y" to start a new game): """).casefold() != "y"):
+        print("OK, bye!")
+        break    
 
 print("=" * 100)

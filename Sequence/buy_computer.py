@@ -14,8 +14,12 @@ while current_choice != "0":
     if current_choice in option_nums:
         i = int(current_choice) - 1
         chosen_item = options[i]
-        cart.append(chosen_item)
-        print("Adding {} into cart".format(chosen_item))
+        if chosen_item in cart:
+            cart.remove(chosen_item)
+            print("Removeing {} from cart".format(chosen_item))
+        else:
+            cart.append(chosen_item)
+            print("Adding {} into cart".format(chosen_item))
     else:
         print("Please add options from the list below:")
         for index, option in enumerate(options):

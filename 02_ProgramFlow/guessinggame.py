@@ -2,10 +2,26 @@ import random
 
 
 def is_continued(number: str):
-    return number.casefold() == exit_code
+    """Check if user enter the exit code.
+
+    Args:
+        number (str): The number which user entered.
+
+    Returns:
+        booling: True if `number` is equal to exit code, False otherwise
+    """
+    return number.casefold() != exit_code
 
 
 def is_valid_guess(number: str):
+    """Check if user's input is numeric AND between min and max.
+
+    Args:
+        number (str): The number which user entered.
+
+    Returns:
+        booling: Is user's input valid or not.
+    """
     if not number.isnumeric():
         print("Enter a 'NUMBER' between {0} and {1}."
               .format(min, max))
@@ -20,6 +36,14 @@ def is_valid_guess(number: str):
 
 
 def give_hint(guess: int):
+    """Compare user's guess is higher or lower than the answer and give hint.
+
+    Args:
+        guess (int): User's last guess.
+
+    Returns:
+        int: The new possible range of the answer from user's last guess.
+    """
     if guess < answer:
         print("Guess higher (from {0} to {1})".format(guess, max))
         return (guess, max)
@@ -71,8 +95,7 @@ while continued:
     else:
         continued = is_continued(
             input(
-                """Wanna play again? (Press Q to exit)
-                >>  """))
+                "Wanna play again? (Press Q to exit)\n>>  "))
 
 print("OK, bye.")
 print("/" * 100)

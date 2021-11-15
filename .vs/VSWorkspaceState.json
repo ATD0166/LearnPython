@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\02_ProgramFlow",
-    "\\03_Sequence",
     "\\04_Functions_Intro"
   ],
-  "SelectedNode": "\\02_ProgramFlow\\guessinggame.py",
+  "SelectedNode": "\\04_Functions_Intro\\colour_print.py",
   "PreviewInSolutionExplorer": false
 }

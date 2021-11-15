@@ -1,4 +1,4 @@
-def multiply(x, y):
+def multiply(x: float, y: float) -> float:
     """Multiply 2 numbers
 
     Args:
@@ -12,7 +12,7 @@ def multiply(x, y):
     return result
 
 
-def is_palindrome(string: str):
+def is_palindrome(string: str) -> bool:
     """Check if a string is a palindrome.
 
     Args:
@@ -25,7 +25,7 @@ def is_palindrome(string: str):
     return backward.casefold() == string.casefold()
 
 
-def palindrome_sentence(sentence: str):
+def palindrome_sentence(sentence: str) -> bool:
     new_str = ""
     for char in sentence:
         if char.isalnum():
@@ -34,7 +34,7 @@ def palindrome_sentence(sentence: str):
     return is_palindrome(new_str)
 
 
-def fibonacci(n):
+def fibonacci(n: int) -> int:
     """Return the `n` th Fibonacci number, for positive `n`."""
     if 0 <= n <= 1:
         return n

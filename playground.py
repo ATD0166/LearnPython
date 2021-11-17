@@ -1,20 +1,22 @@
-def sum_eo(n, t):
-    sum = 0
-    if  "e" in t.casefold():
-        for i in range(n):
-            if i % 2 == 0:
-                sum += i
-    elif "o" in t.casefold():
-        for i in range(n):
-            if not i & 2 == 0:
-                sum += i
+def fizz_buzz(number: int) -> str:
+    """
+    Play Fizz buzz
+ 
+    :param number: The number to check.
+    :return: 'fizz' if the number is divisible by 3.
+        'buzz' if it's divisible by 5.
+        'fizz buzz' if it's divisible by both 3 and 5.
+        The number, as a string, otherwise.
+    """
+    if number % 15 == 0:
+        return "fizz buzz"
+    elif number % 3 == 0:
+        return "fizz"
+    elif number % 5 == 0:
+        return "buzz"
     else:
-        sum = -1
-    return sum
-
-print(
-    sum_eo(
-        int(input("Enter a number: ")), 
-        input("Enter 'E' for even, 'O' for odd: ")
-        )
-    )
+        return str(number)
+ 
+ 
+for i in range(1, 101):
+    print(fizz_buzz(i))

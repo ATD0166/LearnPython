@@ -1,5 +1,3 @@
-import colorama
-
 def fizz_buzz(num: int) -> str:
     """Play fizz buzz.
 

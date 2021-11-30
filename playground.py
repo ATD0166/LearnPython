@@ -1,22 +1,5 @@
-favourites = {'door screen',
-              'frying pan',
-              'roller blind',
-              'football',
-              'coffee grinder',
-              'bush hat',
-              'stirling engine',
-              'cachemira cd',
-              'shirt',
-              }
-
-basket = {'garlic crusher',
-          'stirling engine',
-          'frying pan',
-          'shirt',
-          'bush hat',
-          }
-
-# Add your code here.
-suggestions = sorted(favourites - basket)
-
-
+import time
+print("Loading", end="")
+for i in range(6):
+    print(".", end='', flush=True)
+    time.sleep(0.2)

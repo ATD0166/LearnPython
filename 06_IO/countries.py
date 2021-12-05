@@ -19,7 +19,6 @@ with open(input_filepath, encoding='utf-8') as country_file:
             'currency': currency
         }
         countries[name.casefold()] = country_dict
-       
 
 # for key, val in countries.items():
 #     print(key)

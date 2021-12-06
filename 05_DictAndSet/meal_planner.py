@@ -1,6 +1,5 @@
 from contents import pantry, recipes
 
-
 def search_recipe(menu_num: str) -> list:
     """Search the recipe and retrive it's ingredient by user input.
 
@@ -59,18 +58,19 @@ def consume_ingredient(recipe_ingredients: list):
         print(f"\t{key} = {value}")
 
 
-def add_to_shopping_list(data: dict, item: str, quantity: int):
+def add_to_shopping_list(data: dict, item: str, amount: int):
     """Adding item and it's quantity to buy into `data`.
 
     Args:
         data (dict): The shopping list.
         item_name (str): Items to buy.
-        quantity (int): Quantity needed.
+        amount (int): Quantity needed.
     """
-    if item in data:
-        data[item] = quantity
-    else:
-        data[item] += quantity
+    # if item in data:
+    #     data[item] = amount
+    # else:
+    #     data[item] += amount
+    data[item] = data.setdefault(item, 0) + amount
 
 
 shopping_list = {}

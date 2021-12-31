@@ -22,7 +22,7 @@ while True:
     if user_input == '0':
         print('Goodbye!')
         break
-    
+
     # step 4: check if input valid
     if tz_dict.get(user_input) == None:
         print(f"Sorry, {user_input} is not a valid option...")
@@ -34,7 +34,8 @@ while True:
     # step 6: use input to search item in datetime module.
     localtime = datetime.datetime.now(tz=tz_info)
     utctime = datetime.datetime.utcnow()
-    print(f"\nThe time in {tz_dict[user_input]} is\n\n {localtime.strftime('%A, %x, %X')}")
-    print(f"\nThe UTC time is\n\n {utctime.strftime('%A, %x, %X')}")
-    
+    print(
+        f"\nThe time in {tz_dict[user_input]} is\n\n {localtime.strftime('%A %x %X %z')}")
+    print(f"\nThe UTC time is\n\n {utctime.strftime('%A %x %X')}")
+
     input("\nPress enter to continue...")

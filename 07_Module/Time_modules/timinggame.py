@@ -1,4 +1,5 @@
-import time, random
+import time
+import random
 
 sec = random.randint(5, 10)
 
@@ -23,5 +24,5 @@ elif diff > 0:
     print(f"可惜，你快了{diff.__abs__()}")
 else:
     print("Ｗow，完美！")
-    
+
 print()

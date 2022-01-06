@@ -35,22 +35,30 @@ def clear():
 
 
 def plus():
-    global act_buffer
+    global act_buffer, num_buffer_2
+    if num_buffer_2 != '':
+        equals()
     act_buffer = '+'
 
 
 def minus():
-    global act_buffer
+    global act_buffer, num_buffer_2
+    if num_buffer_2 != '':
+        equals()
     act_buffer = '-'
 
 
 def multiple():
-    global act_buffer
+    global act_buffer, num_buffer_2
+    if num_buffer_2 != '':
+        equals()
     act_buffer = '*'
 
 
 def divide():
-    global act_buffer
+    global act_buffer, num_buffer_2
+    if num_buffer_2 != '':
+        equals()
     act_buffer = '/'
 
 
